@@ -1,0 +1,695 @@
+Labyrinth of Loops
+
+/* In countdown.js, write a basic while loop that prints to the console all the numbers from 10 to 1 in descending order. We’ve given you a starting variable to get the wheels turning. */
+
+// Create the variable num to 10
+var num = 10;
+
+// Create a while loop that said while num bigger than 0 do this
+while(num > 0) {
+  //Print the num first, because we want to see the number 10
+  console.log(num);
+
+  // once the console print number 10 start counting down
+  num -= 1;
+
+  // The while loop will keep looping until the num variable reach 0 and stop the loop, because of the statement
+  // must be bigger than 0 which is false
+}
+/* In the Death Valley National Park, a group of environmentalists have begun a project that will grow the population of Bighorn Sheep. Every month, the population will multiply by four! To stay on top of this explosive growth, the scientists would like a printout of how many sheep will make a new home in Death Valley.
+
+In deathValley.js, use the three existing variables to build a while loop that prints a message for one year’s worth of time. Here’s what the first two lines of output should look like:
+
+There will be 16 sheep after 1 month(s)!
+There will be 64 sheep after 2 month(s)!
+*/
+
+// Create a based variables
+var numSheep = 4;
+var monthNumber = 1;
+var monthsInYear = 12;
+
+// Create a while loop with a statement that stop the loop once it reach 1 year
+while( monthNum < monthsInYear ) {
+
+  // SECOND THING TO DO Multiply the num of sheep straight away, because they want the numSheep start at 16 for the first month
+  numSheep *= 4;
+
+  // LAST THING TO DO is just to print with the text and the result for every loop
+  console.log("There will be " + numSheep + " sheep after " + monthNumber + " month(s)!"); 
+
+  // FIRST THING TO DO, we want to make the while loop stop, so we have to increment the monthNum
+  monthNum ++;
+}
+/* In countdown.js, write a basic for loop that prints to the console all the numbers from 10 to 1 in descending order. This is the similar to one of the previous challenges, but this time we’re using a for loop instead of a while loop. */
+
+// Variable i is 10, as long as variable i(10) bigger than 0, minus variable i with 1 for each loop
+for(var i = 10; i > 0; i--){
+  console.log(i);
+}
+/* Morph your previous while loop into a for loop that uses the same variable names. Remember, you’ll still need to declare the starting number of sheep and the number of months to print outside the loop. We’ve given you the starting number of sheep again, as well as the amount of months you’ll need to print out for use in the loop parameters. */
+
+// Create the base variable first
+var numSheep = 4;
+var monthsInYear = 12;
+
+// Create a variable months inside the for loop, make sure the variable months is less equal to variable monthsInYear,
+// then increment variable months by 1
+for(var months = 1; months <= monthsInYear; months++){
+
+  // Multiply the variable numSheep first, because they want to see the first multiplication within the first month
+  numSheep *= 4;
+  console.log("There will be " + numSheep + " sheep after " + months + " month(s)!"); 
+
+
+};
+/* The Hoover Dam has 19 generators of multiple types. For simplicity, let’s say that the first 4 of these generators output 62 megawatts, and the other 15 output 124 megawatts. In hooverDam.js, the Dam Rangers have asked you to design a system of two loops that turns each generator on in progression, and prints the new total of megawatts generated.
+
+They’d like the first loop to be a while loop handling the first 4 generators. Then, they’d like the second loop to be a for loop that handles the other 15 generators. Each output line should resemble the following lines, with adjusted values for the currentGen and totalMW: 
+
+Generator #1 is on, adding 62 MW, for a total of 62 MW!
+Generator #2 is on, adding 62 MW, for a total of 124 MW!
+
+*/
+
+// Create the base variable first
+var currentGen = 1;
+var totalGen = 19;
+// Why this global variable start with 0? because we want to change this variable numbers 
+// in the while loops and in the for loop
+var totalMW = 0;
+
+// Build the while loop first, make a statement that the GLOBAL variable currentGen is less or equal than 4, do the loop
+while(currentGen <= 4) {
+
+  // Modify the variable totalMW
+  totalMW += 62;
+
+  // Print the first loop
+  console.log("Generator #" + currentGen + " is on, adding 62 MW, for a total of " + totalMW + " MW!");
+
+  // After printing the first loop, we want to increment the currentGen
+  currentGen += 1;
+
+}
+
+// Since we have modified the GLOBAL variable of currentGen, the value change into 5,
+// because when the GLOBAL variable of currentGen reach 5, the while loop is stop
+// check by console.log(currentGen);
+
+// We can write for(currentGen; currentGen < totalGen; currentGen +=1) but for details info, we write with basic knowledge
+for(var i = currentGen; i < totalGen; i++){
+
+  // The same as the GLOBAL variable currentGen,
+  // The GLOBAL variable of totalVariable have change with the last value from the while loop
+  // We just need to add the new number according to the instruction
+
+  totalMW += 124;
+  console.log("Generator #" + currentGen + " is on, adding 124 MW, for a total of " + totalMW + " MW!");
+
+}
+Raw
+ CS_JS_202.md
+Conditional Canyon (1 REVIEW, 2 ATTEMPTS)
+
+/* In countdown.js, modify the while loop with a conditional that will only allow a number to be printed if it is even. 
+Your results should be the even numbers from 10 to 2 in descending order. Think carefully about how your code might decide 
+if a number is even… */
+
+// Create a base variable
+var num = 10;
+
+// Create a while loop with the value TRUE by declaring the variable is bigger than 0
+while( num > 0 ) {
+
+  // Create an IF statement, printing that if the variable num is an even number, print that variable
+  // We can do this by applying the MODULUS Method
+  if( num % 2 === 0 ) {
+
+    console.log(num);
+
+  }
+
+  // FIRST THING TO DO, decreasing the variable num value so we do not have Infinite loop
+  num -= 1;
+}
+/* The Badlands National Park would like to print specific messages depending on whether the park is open or closed.
+
+They’ve asked you to modify their badlands.js file to print one of the following messages depending on the boolean value (true or false) of the variable parkIsOpen. We’ve already established for you the status of the variable for today.
+
+Add a pair of conditional statements to print one of the following messages to the console based on the parkIsOpen variable:
+Welcome to the Badlands National Park! Try to enjoy your stay.
+or
+Sorry, the Badlands are particularly bad today. We're closed!
+*/
+
+// Create a variable first, based on TRUE or FALSE
+var parkStatus = true;
+
+// We can just put the variable name in the IF statement condition
+if(parkStatus) {
+  console.log("Welcome to the Badlands National Park! Try to enjoy your stay.");
+  } else {
+  console.log("Sorry, the Badlands are particularly bad today. We're closed!");
+  }
+/* Back at Death Valley, scientists could see that the Sheep Situation would quickly get out of control. They have decided that, for any month the population climbs above 10000, half of the sheep will be sent away to other regions.
+
+Inside our for loop, insert an if statement that:
+
+Removes half of the sheep population if the number of sheep rises above 10000.
+Prints the number of sheep being removed to the console in the following format:
+Removing <number> sheep from the population.
+*/
+
+// Create a based variable
+var numSheep = 4;
+var monthsToPrint = 12;
+
+// Create a FOR loop 
+for(var months = 1; months <= monthsToPrint; months += 1){
+
+  // SECOND THING TO DO
+  // Create an IF statement, if the variable numSheep more than 10000, divided it by 2
+  if(numSheep > 10000){
+    numSheep /= 2;
+    console.log("Removing "+ numSheep +" sheep from the population.");
+  }
+
+
+  // FIRST THING TO DO
+  // Variable numSheep already multiply by the first month
+  numSheep *= 4;
+
+  // Print the sheep and the month
+  console.log("There will be " + numSheep + " sheep after " + monthNumber + " month(s)!");
+
+}
+PLEASE RE-DO THIS MULTIPLE TIMES CS202_04 PROBLEM
+
+We’ve made a significant difference, but there are still too many sheep for the fragile Death Valley ecosystem. The Rangers would like you to implement the following new plan for population reduction:
+
+If the month is a multiple of 4, then find 75% of the sheep population. Log that value to the console in the format below. Then, remove that value from the total number of sheep.
+Otherwise, if the population is above 10000, find half of the sheep population. Log that value to the console in the format below. Then, remove that value from the total number of sheep.
+Use this format for logging sheep reduction:
+Removing <number> sheep from the population.
+
+FIRST ATTEMPT OF RE-DOING * FAILED - PLEASE REDO AGAIN
+
+// Create a variable
+var numSheep = 4;
+var monthsToPrint = 12;
+
+
+for (var monthNumber = 1; monthNumber <= monthsToPrint; monthNumber++) {
+
+    // Create a conditional statement
+    // If the month is divisible by 4 do this
+    if (monthNumber % 4 === 0){
+
+      // Create a variable to capture the REDUCTION of the numSheep first
+      var reduction = numSheep * .75; // This means that the reduction is quarter of the total numSheep;
+      console.log("Removing " + reduction + " sheep from the population."); // Print it out
+
+      // Remove the REDUCTION number of sheep from variable numSheep
+      numSheep -= reduction;
+
+
+    // Else if the numSheep is bigger than 10000 do this
+    } else if ( numSheep > 10000 ){
+
+      var reduction = numSheep * 0.5; // Same local variable name as above does not matter, because it is a local variable
+      console.log("Removing " + reduction + " sheep from the population.");
+
+      // Remove the REDUCTION number of sheep from variable numSheep
+      numSheep -= reduction;
+    }
+
+
+  // After all the IF ELSE Statement, the FOR loop back working by mutliply the variable nameSheep by 4 and console.log it 
+  numSheep *= 4;
+  console.log("There will be " + numSheep + " sheep after " + monthNumber + " month(s)!");
+}
+SOLUTION FOR CS02_04 PROBLEM
+
+// Create a based variable
+var numSheep = 4;
+var monthsToPrint = 12;
+
+// For variable each month until the MonthsToPrint
+for (var monthNumber = 1; monthNumber <= monthsToPrint; monthNumber++) {
+
+  // If the variable monthNumber the multiplication of 4 do this
+  if (monthNumber % 4 === 0) {
+
+    // Create a LOCAL variable that take quarter of the numSheep
+    var reduction = numSheep * .75;
+    console.log("Removing " + reduction + " sheep from the population.");
+
+    // Reduce the variable numSheep with the LOCAL variable reduction
+    numSheep -= reduction;
+  }
+
+  // ELSE IF Condition, if numSheep is bigger than 10000 do
+  else if (numSheep > 10000) {
+
+    // Creata a LOCAL variable that take quarter of the numSheep
+    var reduction = numSheep * .5;
+    console.log("Removing " + reduction + " sheep from the population.");
+
+    // Reduce the variable numSheep with the LOCAL variable reduction
+    numSheep -= reduction;
+  }
+
+  numSheep *= 4;
+  console.log("There will be " + numSheep + " sheep after " + monthNumber + " month(s)!");
+}
+/* The people at the Hoover Dam have called you back, and would like a program that shows what happens when only the even numbered turbines are turned on. And they want it all in just one for loop.
+
+With a set of complex conditional statements inside the loop, construct a way to only turn on even numbered turbines. Remember our power output situation:
+Generators 1 through 4 produce 62 MW.
+Generators 5 through 19 produce 124 MW.
+
+The output should follow this format:
+Generator #1 is off.
+Generator #2 is on, adding 62 MW, for a total of 62 MW!
+*/
+
+// Set a GLOBAL variable
+var totalGen = 19;
+var totalMW = 0;
+
+// Create a FOR loop with variable gen
+for( var gen = 1; gen < totalGen; gen +=1 ){
+
+  // With this FOR loop we are counting gen from 1 to 19, now we just need to make the rules
+  // Even number gen is ON, but gen number 1 - 4 is using 62MW, while 5 - 19 is using 124MW
+
+  // If gen is 0 from modulus 2 AND less and equal to 4 print this statement
+  if( gen % 2 === 0 && gen <= 4){
+    totalMW += 62;
+    console.log("Generator #" + gen + " is on, adding 62 MW, for a total of " + totalMW + " MW!");
+
+  // Else if gen is 0 modulus 2 AND bigger and equal to 5 print this statement
+  } else if (gen % 2 === 0 && gen >= 5) {
+    totalMW += 124;
+    console.log("Generator #" + gen + " is on, adding 124 MW, for a total of " + totalMW + " MW!");
+
+  // Other than the above rules gen are off
+  } else {
+    console.log("Generator #" + gen + " is off.");
+  }
+}
+Raw
+ CS_JS_203.md
+Built-in's Bluff
+
+/* The Park Rangers at Badlands National Park have decided that the browser console is not a very pretty or efficient way to display their greeting to the user. Change the code below to use a pop-up window that displays to the user whether or not the park is open. */
+
+// Create a base variable set to TRUE
+var nationalPark = true;
+
+// Create an IF statement
+if(nationalPark) {
+    console.log("Welcome to the Badlands National Park! Try to enjoy your stay.");
+} else {
+  console.log("Sorry, the Badlands are particularly bad today. We're closed!");
+}
+/* In userProfile.js below, ask the user for their age with a pop-up window function, and store the user’s response in a variable called userAge. Use the following question in the dialog box:
+"What's your age, user?"
+*/
+
+// Create a variable userAge with the prompt command asking the question
+var userAge = prompt("What's your age, user?", "Please enter your age");
+/* Using the userAge variable, we can ensure that the user has entered their age correctly. Use a pop-up window function to confirm the user entry with the following message:
+"You entered <age>. Is this correct?"
+Then store the result of the confirmation in a variable called ageIsCorrect. When you submit your code, enter your age in the prompt window, and then use the confirmation to select whether the entry is correct or incorrect
+*/
+
+// Create a variable with the prompt asking the age
+var userAge = prompt("What is your age, user?", "Please enter your age");
+
+// Create a variable with the confirm command
+var ageIsCorrect = confirm("You entered" + userAge + ". Is this correct?");
+/* We’ve learned to prompt the user for their age, and then confirm that their age has been entered correctly. Now we can use a while loop to improve the way this works.
+
+Create a while loop that will continue to execute as long as the user has not entered the correct age. Inside the loop, provide a confirmation that the age has been entered correctly:
+"You entered <age>. Is this correct?"
+
+If that confirmation statement is correct, then set ageIsCorrect to true and alert the following message:
+"Great! Your age is logged as <age>."
+
+Otherwise, the loop should continue to prompt a user to enter their age and assign that value to the userAge variable:
+"What's your age, user?"
+*/
+
+// Set the variable with the boolean value to false
+var confirmAge = false;
+
+// Create a WHILE loop during the variable confirmAge is false
+while (confirmAge === false) {
+
+    // Ask the user how old is he
+    var userAge = prompt("What's your age, user?");
+
+    // Create a CONFIRM command
+    var confirmAgeUser = confirm("You entered " + userAge + ". Is this correct?");
+
+    // Create an IF statement
+    if(confirmAgeUser === true){
+
+        // Create an ALERT
+        alert("Great! Your age is logged as "+ userAge + ".");
+
+        // Set the confirmAge to true so we can exit the WHILE loop
+        confirmAge = true;
+    }
+
+    // if the confirmAgeUser is not true we go back to variable userAge prompt
+}
+Raw
+ CS_JS_204.md
+The desert of declarations (1 REVIEW, 1 ATTEMPT)
+
+/* In the uniqueMath.js file, build a function declaration called multiplyTrio that takes in three parameters. Inside the function, multiply the numbers together into one product, and return the result. You may use whatever parameter and variable names you’d like.
+*/
+
+// Does not need base variable, can straight away declare a function with a name
+function multiplyTrio(a,b,c) {
+
+  // return the parameter formula and exit the function
+  return a*b*c;
+
+};
+
+// Call the function with the value of the parameter;
+multiplyTrio(1,2,3);
+/* Build a function declaration called maxOf2 that takes in two numbers and returns the greater value. Be careful to think about the possibility of equality as well and return one of the numbers. */
+
+// Does not need base variable, can straight away declare a function with a name
+function maxOf2(a,b) {
+
+  // Use Math.max() to get the which one is the max number
+  return Math.max(a,b);
+
+}
+
+// Call the function with the value of the parameter;
+maxOf2(1,2);
+/* In uniqueMath.js, you’ll see a function called mystery. Refactor the code in the function to include only one line that returns a value. 
+
+function mystery(x, y) {
+  var a = 4 * x * y;
+  var b = 3 * y + 5;
+  var c = a + b;
+  return c;
+}
+*/
+
+// Combine variable a and c
+function mystery(x, y) {
+ return (4 * x * y) + (3 * y + 5);
+};
+START INTERMEZZO
+
+/* Lets design a function that counts "E's" in a user-entered phrased */
+
+function countE() {
+
+  // Ask user for a phrase to check
+  var phrase = prompt("Which phrase would you like to examine?");
+
+  // IF the entry is invalid
+  if( typeof(phrase) != "string" ){
+
+    // Alert the user
+    alert("That's not a valid entry");
+    // Exit function with a failure report
+    return false;
+
+  } else {
+
+    // Make a counter for the E's
+    var eCount = 0;
+    // FOR each character in the user's entry
+    for(var index = 0; index < phrase.length; index++){
+
+      // IF the character is an 'E' or an 'e'
+        if(phrase.charAt(index) === 'E' || phrase.charAt(index) === 'e' ){
+
+          // Increment the counter
+          eCount +=1;
+
+        }
+    }
+
+    // Alert the amount of E's in the phrase and return success
+  alert("There are " + eCount + " E's in \"" + phrase + "\".");
+  return true;
+
+  }
+}
+END INTERMEZZO
+
+/* The Park Rangers in Death Valley National Park divide up the feed responsibilities daily for the Bighorn Sheep population. Each sheep needs 2 lbs of ranger-provided food per day.
+
+Build a function called feedPerRanger that takes in:
+
+The current population of sheep.
+The number of Park Rangers available during the day.
+The function should alert the amount of feed that each Park Ranger should be responsible for on that day. The output should match the following format: 
+Each Park Ranger should load <number> lbs of feed today.
+*/
+
+// Build the function with parameter of population of the sheep and number of park rangers
+function feedPerRanger(popSheep, numRanger){
+
+  // Do the math of how that each sheep needs 2lbs, how much do we need for the total population
+  var totalFeed = popSheep * 2;
+
+  // If we already have how much lbs for the total population, we need to know how many lbs needs depending
+  // of the total number of rangers that day
+  var feedPerRanger = totalFeed / numRanger;
+
+  // Print the alert function
+  alert("Each Park Ranger should load " + feedPerRanger + " lbs of feed today.");
+
+}
+PLEASE RE-DO THIS MULTIPLE TIMES CS204_06 PROBLEM
+
+Back at the Hoover Dam, the technicians have decided they want more control of which generators are on and off. So, they’ve asked you to develop a way to adjust the total megawatts generated upon the switch-on or switch-off of a single, chosen generator.
+
+Build a function named changePowerTotal that takes in four parameters:
+
+The total power generated (a number)
+The generator ID for the current generator (a number)
+The generator status (a string that says "on" or "off")
+The amount of power produced by the current generator (a number)
+Your function should:
+
+If the current generator is set to "on", then add to the total power generated.
+Or if the current generator is set to "off", then remove from the total power generated.
+return the total power generated.
+alert the technician in the following formats:
+For switching on:
+
+Generator #2 is now on, adding 62 MW, for a total of 62 MW!
+
+For switching off:
+
+Generator #2 is now off, removing 62 MW, for a total of 0 MW!
+SOLUTION FOR CS204_06 PROBLEM
+
+// Create the function with the 4 parameters as requested
+function changePowerTotal(total, ID, status, power) {
+
+  // IF the parameter status is on
+  if (status == "on") {
+
+    // Parameter total plus parameter power
+    total += power;
+
+    // Alert the user
+    alert("Generator #" + ID + " is now " + status + ", adding " + power + " MW, for a total of " + total + " MW!");
+
+  // Else if the parameter status is off
+  } else if (status == "off") {
+
+    // Subtract parameter total with parameter power
+    total -= power;
+
+    // Alert the user
+    alert("Generator #" + ID + " is now " + status + ", removing " + power + " MW, for a total of " + total + " MW!");
+  }
+
+  // Return total value
+  return total;
+}
+Raw
+ CS_JS_205.md
+The Array Archipelago
+
+/* In the following array, set one value of the array so that it will be a list of numbers in order.
+
+var list = [1, 2, 3, 7, 5, 6, 7, 8, 9];
+*/
+
+// Access the array index and change the value
+list[3] = 4;
+/* Using the specific array function that adds data to the back end of the array, add the next number to your newly corrected list.
+
+var list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+*/
+
+// Use the PUSH function
+list.push(10);
+/* Create an array called values that contains the following contents in order:
+
+(1) a string (2) a number (3) a boolean */
+
+var values = ["Hello", 37, true];
+/* Now using the specific array function that takes a piece of data off the back of an array, remove the last entry from your values array and store the result in a variable called bool. */
+var values = ["Hello", 37, true];
+
+// POP the last index of the array and set that as a value for the variable bool
+var bool = values.pop();
+/* Check out the following setup. Enter a line of code that declares a variable called infant and uses the array eightiesMovies to access the word "Baby".
+
+var movie1 = [16, "Candles"];
+var movie2 = [3, "Men", "and", "a", "Baby"];
+var eightiesMovies = [movie1, movie2];
+*/
+
+// Get that index baby from the variable eightiesMovies
+var infant = eightiesMovies[1][4];
+/* Now alert to the screen the entire first movie in eightiesMovies, but only using the eightiesMovies variable. For now, use the concatenation operator to unite the words into one string. Remember to be attentive to necessary whitespace…
+
+var movie1 = [16, "Candles"];
+var movie2 = [3, "Men", "and", "a", "Baby"];
+var eightiesMovies = [movie1, movie2];
+*/
+
+alert(eightiesMovies[0][0] + " " + eightiesMovies[0][1]);
+START INTERMEZZO
+
+// build a function for passenger name with array of passenger
+/* function addPassenger ( "passenger name", "array of passenger") {
+
+    If list is empty {
+      add passenger to the list
+    } else {
+
+      For all spots in the list {
+
+        If the current spot is empty {
+
+          Add passenger to that spot
+          return the list and exit the function
+
+          } else if the end of the list is reachable {
+
+            Add passenger to end of the list
+            return the list and exit the function
+
+          }
+
+      }
+
+    }
+
+    }
+*/
+
+// Set the arrList as an empty Variable first
+var arrList = [];
+
+function addPassenger(name, arrList){
+
+  // If the list is empty, add the passenger name
+  if(arrList.length === 0){
+
+    // Push the name into the array list
+    arrList.push(name);
+  } else {
+
+    // If the list is not empty, start searching the index array
+    for( var i = 0; i < arrList.length; i++) {
+
+      // If the current spot is empty/ undefined, put the name into that spot
+      if(arrList[i] === undefined){
+
+        arrList[i] = name;
+        return arrList;
+
+      // Else if we reach at the end of the array length
+      } else if( i === arrList.length - 1) {
+
+        // Push the name into the end of the array
+        arrList.push(name);
+        return arrList;
+
+      }
+
+    }
+  }
+}
+
+// Now create a function that delete the passenger name
+// Almost the same as addPassenger function but slightly different
+
+function deletePassenger(name, arrList) {
+
+  // Check if the list is exists or not
+  if(arrList.length === 0) {
+
+    console.log("The list is empty");
+
+  } else {
+
+    // If the list is not empty, check the arrList array
+    for(var i = 0; i < arrList.length; i++){
+
+      // if we have the same name in the list
+      if(arrList[i] === name){
+
+        arrList = undefined;
+        return arrList;
+
+      // If we reach the end of the arrList and the passenger did not exist  
+      } else if( i = arrList.length - 1) {
+
+        // Report that the passenger not found
+        console.log("Passenger not found");
+
+      }
+    }
+  }
+
+  // We need to return the arrList if the list was empty or the passenger can not found,
+  // so we will return the same arrList as the original
+  return arrList;
+}
+END INTERMEZZO
+
+/* Build out the numStrings function below, using a loop that counts all of the strings in the array parameter called list. Remember to return the amount of strings found before the function exits. */
+
+// Create the function with the parameter list
+function numString(list) {
+
+  // Set the counter start at 0
+  var counter = 0;
+
+  // Go trough all the values in the array list
+  for(var i = 0; i < list.length; i++){
+
+    // Create an IF statement to check the value in the array is a string
+    if(typeof list[i] === "string"){
+
+      // Incerement the variable counter
+      counter += 1;
+
+    }
+  }
+
+  // Return the counter
+  return counter;
+}

@@ -8,5 +8,4 @@ var movie = {
 function correctedObject(arg) {
 	console.log(arg);
 }
-
-correctedObject(movie);
+correctedObject("movie");
